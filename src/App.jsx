@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import CursorLight from './components/CursorLight'
 import './App.css'
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
 
   return (
     <>
-      {/* <CursorLight/> */}
       <nav className='navContainer'>
         <ul className='navLinks'>
           <li>About</li>
