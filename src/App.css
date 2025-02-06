@@ -1,6 +1,7 @@
 .navContainer{
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 .navLinks {
     padding: 1em 2em;
@@ -11,14 +12,50 @@
     border: 2px solid #FBFCFC;
     border-radius: 16px;
     gap: 1em;
+    & li {
+        display: block;
+        cursor: default;
+        padding: 0.5em 1em;
+        border-radius: 16px;
+        &:hover {
+            background-color: #32D93D;
+            color: #1C1C1C;
+        }
+    }
 }
-.navLinks li {
-    display: block;
-    cursor: default;
-    padding: 0.5em 1em;
-    border-radius: 16px;
-    &:hover {
-        background-color: #32D93D;
-        color: #1C1C1C;
+
+.homeSection {
+    margin: 2em 4em;
+    & h1 {
+        font-size: 1em;
+    }
+    & h2 {
+        color: #32D93D;
+        margin: 0;
+        font-size: 5em;
+    }
+    & h3 {
+        margin: 0;
+        font-size: 5em;
+    }
+    & p {
+        width: 50%;
+    }
+    & button {
+        background: none;
+        font-family: vcr_osd;
+        font-size: 1.5em;
+        margin: 1em;
+        padding: 1em 2em;
+        color: #FBFCFC;
+        border: 2px solid #FBFCFC;
+        border-radius: 16px;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+            border-color: #1C1C1C;
+            background-color: #32D93D;
+            color: #1C1C1C;
+        }   
     }
 }
