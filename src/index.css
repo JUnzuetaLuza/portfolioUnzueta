@@ -1,4 +1,16 @@
-
+#root {
+  font-size: 1.25vw;
+  font-family: vcr_osd;
+}
 body {
   margin: 0;
+  background-color: #1C1C1C;
+  color: #FBFCFC;
+}
+
+@font-face {
+  font-family: vcr_osd;
+  src: url(./fonts/VCR_OSD_MONO_1.001.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

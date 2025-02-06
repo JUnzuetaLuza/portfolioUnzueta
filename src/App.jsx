@@ -8,6 +8,14 @@ function App() {
 
   return (
     <>
+      <nav className='navContainer'>
+        <ul className='navLinks'>
+          <li>About</li>
+          <li>Skills</li>
+          <li>Work</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </>
   )
 }
