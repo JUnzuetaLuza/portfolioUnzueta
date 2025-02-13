@@ -63,8 +63,8 @@
 }
 
 .aboutSection {
-    display: flex;
     margin: 4em 4em;
+    display: flex;
     & div {
         width: 50%;
     }
@@ -80,6 +80,34 @@
             filter:drop-shadow(15px 15px 5px #32D93D);
             transition: filter 0.2s ease;
         }
+    }
+    & h2 {
+        color: #32D93D;
+        font-size: 3em;
+    }
+}
+
+.skillsSection {
+    margin: 4em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+        color: #32D93D;
+        font-size: 3em;
+    }
+    & div {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+    & h4 {
+        padding: 1em;
+        border: 2px solid #FBFCFC;
+        border-radius: 16px;
     }
 }
 

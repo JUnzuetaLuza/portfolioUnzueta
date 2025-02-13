@@ -25,10 +25,27 @@ function App() {
       <section className='aboutSection'>
         <div>
           <h2>About Me</h2>
-          <p>Hi! My name is José, I’m a passionate and driven Full Stack Developer with hands-on experience in a wide range of technologies. My journey in web development has been fueled by a deep curiosity for building functional, user-friendly applications and a commitment to continuous learning.<br/><br/>I thrive in dynamic environments where I can leverage my proactive and self-taught nature to stay ahead of the curve with emerging technologies. Whether collaborating in multidisciplinary teams or tackling challenges independently, I bring a problem-solving mindset and a dedication to delivering high-quality solutions.<br/><br/>Currently, I’m working as a freelance developer, where I’ve had the opportunity to contribute to diverse projects and refine my skills in both front-end and back-end development. I’m particularly excited about creating innovative digital experiences that are not only visually appealing but also accessible and impactful.</p>
+          <p>Hi! My name is José, I’m a passionate developer with hands-on experience building functional, user-friendly applications. My journey is driven by a love for problem-solving and a commitment to continuous learning.<br/><br/>I thrive in dynamic environments, leveraging my proactive and self-taught nature to stay ahead with emerging technologies. Whether collaborating in teams or working independently, I bring a problem-solving mindset and a dedication to high-quality solutions.<br/><br/>I’ve contributed to diverse projects, refining my skills in both front-end and back-end development. I’m excited about creating innovative, accessible, and impactful digital experiences.</p>
         </div>
         <div>
           <img src={pfPic}/>
+        </div>
+      </section>
+      <section className='skillsSection'>
+        <h2>Skills</h2>
+        <div>
+          <h4>JavaScript</h4>
+          <h4>React.js</h4>
+          <h4>React Native</h4>
+          <h4>Node.js</h4>
+          <h4>Next.js</h4>
+          <h4>Redux</h4>
+          <h4>Java</h4>
+          <h4>Swift</h4>
+          <h4>HTML</h4>
+          <h4>CSS</h4>
+          <h4>PostgreSQL</h4>
+          <h4>Git</h4>
         </div>
       </section>
     </>
