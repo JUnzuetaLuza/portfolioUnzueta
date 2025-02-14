@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import pfPic from './assets/pfPic.jpg'
+import { WorkCard } from './components/WorkCard/WorkCard.jsx'
+import { works } from './components/WorkCard/WorkData.js'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -46,6 +46,14 @@ function App() {
           <h4>CSS</h4>
           <h4>PostgreSQL</h4>
           <h4>Git</h4>
+        </div>
+      </section>
+      <section className='workSection'>
+        <h2>Work</h2>
+        <div className='workCards'>
+          {works.map((work, index) => (
+            <WorkCard key={index} work={work} />
+          ))}
         </div>
       </section>
     </>

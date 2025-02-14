@@ -1,0 +1,77 @@
+.workCard {
+    width: 40%;
+    height: 40vh;
+    perspective: 2000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cardInner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipped .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*FRONT*/
+
+.workImage {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.cardFront div {
+    height: 20%;
+    margin: 0 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardFront a {
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/*BACK*/
+
+.cardBack {
+    transform: rotateY(180deg);
+}
+
+.cardBack h3, .cardBack p {
+    padding: 0 1rem;
+    color: #F8F8FF;
+    z-index: 2;
+}
+
+.cardBack a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    color: #F8F8FF;
+    cursor: pointer;
+    z-index: 2;
+}

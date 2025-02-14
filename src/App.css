@@ -102,12 +102,26 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1em;
+        gap: 0 1em;
     }
     & h4 {
         padding: 1em;
         border: 2px solid #FBFCFC;
         border-radius: 16px;
+    }
+}
+
+.workSection {
+    margin: 4em 4em;
+    & h2 {
+        color: #32D93D;
+        font-size: 3em;
+    }
+    & .workCards {
+        gap: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
