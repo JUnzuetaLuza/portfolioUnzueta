@@ -52,6 +52,7 @@
         color: #FBFCFC;
         border: 2px solid #FBFCFC;
         border-radius: 16px;
+        cursor: pointer;
         transition: transform 0.2s;
         &:hover {
             transform: scale(1.1);
@@ -122,6 +123,40 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+}
+
+.contactSection {
+    margin: 4em 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & h2 {
+        color: #32D93D;
+        font-size: 3em;
+    }
+    & p {
+        width: 60%;
+        text-align: center;
+    }
+    & button {
+        width: fit-content;
+        background: none;
+        font-family: vcr_osd;
+        font-size: 1.5em;
+        margin: 1em;
+        padding: 1em 2em;
+        color: #FBFCFC;
+        border: 2px solid #FBFCFC;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+            border-color: #1C1C1C;
+            background-color: #32D93D;
+            color: #1C1C1C;
+        }   
     }
 }
 

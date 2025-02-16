@@ -1,9 +1,25 @@
 import './App.css'
 import pfPic from './assets/pfPic.jpg'
+import CV from './assets/JoseUnzueta-CV_EN.pdf'
 import { WorkCard } from './components/WorkCard/WorkCard.jsx'
 import { works } from './components/WorkCard/WorkData.js'
 
 function App() {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'JoseUnzueta-CV_EN.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  function openGmail() {
+    const subject = encodeURIComponent("Let's work together!");
+    const body = encodeURIComponent("Hi José,\n\nI came across your portfolio and wanted to reach out...");
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=junzuetaluza@gmail.com&su=${subject}&body=${body}`);
+  }
 
   return (
     <>
@@ -20,7 +36,7 @@ function App() {
         <h2>José Unzueta</h2>
         <h3>Making your dream web.</h3>
         <p>I'm a Full Stack Developer (and somethings designer) with a lot of entusiasm. My goal is to continue learning and growing in this exciting industry while contributing to the development of innovative solutions. Currently, I'm working as freelance.</p>
-        <button>Check my CV</button>
+        <button onClick={handleDownload}>Check my CV</button>
       </section>
       <section className='aboutSection'>
         <div>
@@ -55,6 +71,11 @@ function App() {
             <WorkCard key={index} work={work} />
           ))}
         </div>
+      </section>
+      <section className='contactSection'>
+        <h2>Contact</h2>
+        <p>I’m constantly looking for any new opportunities, my inbox is always open. Whether you have a proposal, a question or just want to say hi, I’ll get back to you!</p>
+        <button onClick={openGmail}>Email me</button>
       </section>
     </>
   )
