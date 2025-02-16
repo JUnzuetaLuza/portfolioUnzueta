@@ -14,7 +14,7 @@
     gap: 1em;
     & li {
         display: block;
-        cursor: default;
+        cursor: pointer;
         padding: 0.5em 1em;
         border-radius: 16px;
         &:hover {
@@ -146,6 +146,46 @@
         font-size: 1.5em;
         margin: 1em;
         padding: 1em 2em;
+        color: #FBFCFC;
+        border: 2px solid #FBFCFC;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+            border-color: #1C1C1C;
+            background-color: #32D93D;
+            color: #1C1C1C;
+        }   
+    }
+}
+
+.footerContainer {
+    margin: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    & img {
+        height: 2em;
+        margin: 0 1em;
+        cursor: pointer;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+        }   
+    }
+    & button {
+        width: fit-content;
+        background: none;
+        font-family: vcr_osd;
+        font-size: 1.5em;
+        margin: 1em;
+        padding: 0 0.5em;
         color: #FBFCFC;
         border: 2px solid #FBFCFC;
         border-radius: 16px;

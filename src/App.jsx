@@ -1,10 +1,31 @@
 import './App.css'
+import React, { useRef } from 'react'
 import pfPic from './assets/pfPic.jpg'
 import CV from './assets/JoseUnzueta-CV_EN.pdf'
+import github from './assets/github.png'
+import linkedin from './assets/linkedin.png'
+import email from './assets/email.png'
 import { WorkCard } from './components/WorkCard/WorkCard.jsx'
 import { works } from './components/WorkCard/WorkData.js'
 
 function App() {
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToRef = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   const handleDownload = () => {
     const link = document.createElement('a');
@@ -25,10 +46,10 @@ function App() {
     <>
       <nav className='navContainer'>
         <ul className='navLinks'>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Work</li>
-          <li>Contact</li>
+          <li onClick={() => scrollToRef(aboutRef)}>About</li>
+          <li onClick={() => scrollToRef(skillsRef)}>Skills</li>
+          <li onClick={() => scrollToRef(workRef)}>Work</li>
+          <li onClick={() => scrollToRef(contactRef)}>Contact</li>
         </ul>
       </nav>
       <section className='homeSection'>
@@ -38,7 +59,7 @@ function App() {
         <p>I'm a Full Stack Developer (and somethings designer) with a lot of entusiasm. My goal is to continue learning and growing in this exciting industry while contributing to the development of innovative solutions. Currently, I'm working as freelance.</p>
         <button onClick={handleDownload}>Check my CV</button>
       </section>
-      <section className='aboutSection'>
+      <section ref={aboutRef} className='aboutSection'>
         <div>
           <h2>About Me</h2>
           <p>Hi! My name is José, I’m a passionate developer with hands-on experience building functional, user-friendly applications. My journey is driven by a love for problem-solving and a commitment to continuous learning.<br/><br/>I thrive in dynamic environments, leveraging my proactive and self-taught nature to stay ahead with emerging technologies. Whether collaborating in teams or working independently, I bring a problem-solving mindset and a dedication to high-quality solutions.<br/><br/>I’ve contributed to diverse projects, refining my skills in both front-end and back-end development. I’m excited about creating innovative, accessible, and impactful digital experiences.</p>
@@ -47,7 +68,7 @@ function App() {
           <img src={pfPic}/>
         </div>
       </section>
-      <section className='skillsSection'>
+      <section ref={skillsRef} className='skillsSection'>
         <h2>Skills</h2>
         <div>
           <h4>JavaScript</h4>
@@ -64,7 +85,7 @@ function App() {
           <h4>Git</h4>
         </div>
       </section>
-      <section className='workSection'>
+      <section ref={workRef} className='workSection'>
         <h2>Work</h2>
         <div className='workCards'>
           {works.map((work, index) => (
@@ -72,11 +93,22 @@ function App() {
           ))}
         </div>
       </section>
-      <section className='contactSection'>
+      <section ref={contactRef} className='contactSection'>
         <h2>Contact</h2>
         <p>I’m constantly looking for any new opportunities, my inbox is always open. Whether you have a proposal, a question or just want to say hi, I’ll get back to you!</p>
         <button onClick={openGmail}>Email me</button>
       </section>
+      <footer className='footerContainer'>
+        <div>
+          <ul>
+            <a href='https://github.com/JUnzuetaLuza' target="_blank" rel="noopener noreferrer"><img src={github}/></a>
+            <a href='https://www.linkedin.com/in/jose-unzueta-21689126a/' target="_blank" rel="noopener noreferrer"><img src={linkedin}/></a>
+            <a onClick={openGmail}><img src={email}/></a>
+          </ul>
+          <button onClick={scrollToTop}>↑</button>
+        </div>
+        <p>© 2025 José Unzueta. All rights reserved.</p>
+      </footer>
     </>
   )
 }
