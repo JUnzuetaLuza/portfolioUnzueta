@@ -7,7 +7,7 @@ export const works = [
     {
         name: 'Green Screen',
         image: GreenScreen,
-        description: 'Sitio web enfocado en recopilar reseñas y puntuaciones de peliculas, y series que ofrece una amplia gama de funciones, incluyendo la creación de perfiles de usuario, la personalización de listas de reproducción, donaciones con beneficios y un completo panel de administración.',
+        description: 'Website focused on collecting reviews and ratings of movies and series that offers a wide range of features, including the creation of user profiles, customization of playlists, donations with benefits and a complete administration panel.',
         skills: ['React.js', 'Redux', 'Next.js', 'PostgreSQL'],
         github: 'https://github.com/MoviesPf/MoviesFront',
         youtube: 'https://www.youtube.com/watch?v=y3rvK_6h5xE',
@@ -15,7 +15,7 @@ export const works = [
     {
         name: 'Blind Cat Rescue',
         image: BlindCatRescue,
-        description: 'Proyecto basado en un rediseño de la web realizado por Anna Chmil para el refugio Blind Cat Rescue con sede en St Paul, Carolina del Norte (EE UU). El objetivo del proyecto era crear un sitio web moderno y fácil de usar que pudiera atraer a posibles colaboradores.',
+        description: 'Project based on a website redesign by Anna Chmil for the Blind Cat Rescue shelter based in St Paul, North Carolina (USA). The goal of the project was to create a modern and user-friendly website that could attract potential supporters.',
         skills: ['JavaScript', 'HTML', 'CSS'],
         github: 'https://github.com/JUnzuetaLuza/blindCatRescue',
         web: 'https://blind-cat-rescue.vercel.app/',
@@ -23,7 +23,7 @@ export const works = [
     {
         name: 'Weather App',
         image: WeatherApp,
-        description: 'Web que brinda datos y pronósticos meteorológicos de su ubicación o lugar de su selección.',
+        description: 'Web that provides weather data and forecasts for your location or place of your choice.',
         skills: ['JavaScript', 'React.js'],
         github: 'https://github.com/JUnzuetaLuza/weatherApp',
         web: 'https://budget-weather.vercel.app/',
