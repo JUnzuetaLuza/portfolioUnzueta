@@ -6,20 +6,15 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 15px 15px 5px #32D93D;
+    }
 }
 
-.cardInner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flipped .cardInner {
-    transform: rotateY(180deg);
-}
-
-.cardFront, .cardBack {
+.cardFront {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,9 +27,6 @@
     justify-content: center;
 }
 
-
-/*FRONT*/
-
 .workImage {
     width: 100%;
     height: 80%;
@@ -44,34 +36,6 @@
     height: 20%;
     margin: 0 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-}
-.cardFront a {
-    margin: 0;
-    cursor: pointer;
-    z-index: 2;
-}
-
-
-/*BACK*/
-
-.cardBack {
-    transform: rotateY(180deg);
-}
-
-.cardBack h3, .cardBack p {
-    padding: 0 1rem;
-    color: #F8F8FF;
-    z-index: 2;
-}
-
-.cardBack a {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin: 0;
-    color: #F8F8FF;
-    cursor: pointer;
-    z-index: 2;
 }

@@ -1,10 +1,11 @@
 import './App.css'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import pfPic from './assets/pfPic.jpg'
 import CV from './assets/JoseUnzueta-CV_EN.pdf'
 import github from './assets/github.png'
 import linkedin from './assets/linkedin.png'
 import email from './assets/email.png'
+import { WorkModal } from './components/WorkModal/WorkModal.jsx'
 import { WorkCard } from './components/WorkCard/WorkCard.jsx'
 import { works } from './components/WorkCard/WorkData.js'
 
@@ -13,6 +14,19 @@ function App() {
   const skillsRef = useRef(null);
   const workRef = useRef(null);
   const contactRef = useRef(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedWork, setSelectedWork] = useState(null);
+
+  const openModal = (work) => {
+    setSelectedWork(work);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedWork(null);
+  };
 
   const scrollToRef = (ref) => {
     if (ref.current) {
@@ -44,14 +58,15 @@ function App() {
 
   return (
     <>
-      <nav className='navContainer'>
+      <header className='navContainer'>
         <ul className='navLinks'>
           <li onClick={() => scrollToRef(aboutRef)}>About</li>
           <li onClick={() => scrollToRef(skillsRef)}>Skills</li>
           <li onClick={() => scrollToRef(workRef)}>Work</li>
           <li onClick={() => scrollToRef(contactRef)}>Contact</li>
         </ul>
-      </nav>
+      </header>
+      <main>
       <section className='homeSection'>
         <h1>Hi, my name is</h1>
         <h2>José Unzueta</h2>
@@ -89,7 +104,7 @@ function App() {
         <h2>Work</h2>
         <div className='workCards'>
           {works.map((work, index) => (
-            <WorkCard key={index} work={work} />
+            <WorkCard key={index} work={work} onClick={() => openModal(work)}/>
           ))}
         </div>
       </section>
@@ -98,6 +113,7 @@ function App() {
         <p>I’m constantly looking for any new opportunities, my inbox is always open. Whether you have a proposal, a question or just want to say hi, I’ll get back to you!</p>
         <button onClick={openGmail}>Email me</button>
       </section>
+      </main>
       <footer className='footerContainer'>
         <div>
           <ul>
@@ -109,6 +125,9 @@ function App() {
         </div>
         <p>© 2025 José Unzueta. All rights reserved.</p>
       </footer>
+      
+      {/* Renderizar el WorkModal */}
+      <WorkModal isOpen={isModalOpen} onClose={closeModal} work={selectedWork} />
     </>
   )
 }
