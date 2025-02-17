@@ -121,7 +121,7 @@ function App() {
             <a href='https://www.linkedin.com/in/jose-unzueta-21689126a/' target="_blank" rel="noopener noreferrer"><img src={linkedin}/></a>
             <a onClick={openGmail}><img src={email}/></a>
           </ul>
-          <button onClick={scrollToTop}>↑</button>
+          <button onClick={scrollToTop}>Check CV</button>
         </div>
         <p>© 2025 José Unzueta. All rights reserved.</p>
       </footer>
