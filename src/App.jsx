@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import pfPic from './assets/pfPic.jpg'
 import CV from './assets/JoseUnzueta-CV_EN.pdf'
 import github from './assets/github.png'
@@ -71,7 +71,7 @@ function App() {
         <h1>Hi, my name is</h1>
         <h2>José Unzueta</h2>
         <h3>Making your dream web.</h3>
-        <p>I'm a Full Stack Developer (and somethings designer) with a lot of entusiasm. My goal is to continue learning and growing in this exciting industry while contributing to the development of innovative solutions. Currently, I'm working as freelance.</p>
+        <p>I’m a Full Stack Developer (and somethings designer) with a lot of entusiasm. My goal is to continue learning and growing in this exciting industry while contributing to the development of innovative solutions. Currently, I’m working as freelance.</p>
         <button onClick={handleDownload}>Check my CV</button>
       </section>
       <section ref={aboutRef} className='aboutSection'>
